@@ -1,0 +1,862 @@
+/* Importing multiple beautiful fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Merriweather:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    animation: backgroundRotation 15s infinite linear;
+}
+
+/* Background Image Rotation */
+@keyframes backgroundRotation {
+    0% { background: url('arturo-rey-CgVqj1l-u44-unsplash.jpg') no-repeat center center/cover; }
+    33% { background: url('aubrey-odom-bzbWIxsN3iQ-unsplash.jpg') no-repeat center center/cover; }
+    66% { background: url('ra-dragon-UpKHoF7fYUw-unsplash.jpg') no-repeat center center/cover; }
+    100% { background: url('anton-murygin-jD7WYFNJ-0s-unsplash.jpg') no-repeat center center/cover; }
+}
+
+/* Background Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+/* Blur effect for main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Admin Login Section */
+#adminLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#adminLogin input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border 0.3s;
+}
+
+#adminLogin input:focus {
+    border: 1px solid #6c5ce7;
+    outline: none;
+}
+
+#adminLogin button {
+    background: linear-gradient(135deg, #6c5ce7, #4834d4);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#adminLogin button:hover {
+    background: linear-gradient(135deg, #4834d4, #6c5ce7);
+    transform: translateY(-3px);
+}
+
+/* Admin Login Error */
+#loginError {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Logout Button */
+#logoutButton {
+    display: block;
+    width: 100%;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logoutButton:hover {
+    background: #4834d4;
+    transform: translateY(-2px);
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Heading */
+h1 {
+    font-family: 'Quicksand', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #d63031;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Subheading */
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #636e72;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+button {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #27ae60;
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Status Messages */
+#status {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Success Message */
+.success {
+    color: #00b894;
+}
+
+/* Warning Message */
+.warning {
+    color: #f39c12;
+}
+
+/* Error Message */
+.error {
+    color: #e74c3c;
+}
+
+/* QR Scanner Section */
+.qr-container {
+    margin-top: 20px;
+}
+
+/* Scan Button */
+#scanButton {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#scanButton:hover {
+    background: linear-gradient(135deg, #00cec9, #00b894);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+
+    #logoutButton {
+        width: 100%;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Progress Bar (if applicable) */
+.loading-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6c5ce7;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: none; /* Toggle with JS when needed */
+}
+
+.loading-banner p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Admin Page */
+#adminPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#adminDashboard h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* QR Code Generator Page */
+#qrGeneratorPage {
+    display: none;
+}
+
+#qrGeneratorPage h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#qrGeneratorPage input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#qrPreviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#qrPreviewContainer img {
+    width: 100px;
+    height: 100px;
+}
+
+/* User Page */
+#userPage {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#userPage h1 {
+    font-size: 28px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+#userPage h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#userPage button {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Date Range Selector */
+#dateRangeSelector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#dateRangeSelector input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#dateRangeSelector button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #adminPage, #userPage {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #qrPreviewContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #qrPreviewContainer img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #dateRangeSelector {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #adminDashboard h1, #qrGeneratorPage h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #qrPreviewContainer img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Styling for CSV Prompt & Notification */
+#downloadCSVPrompt {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadCSVPrompt:hover {
+    background-color: #218838;
+}
+
+/* QR Code Download Button */
+#downloadQRButton {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadQRButton:hover {
+    background-color: #218838;
+}
+
+/* Alerts */
+.alert {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 5px;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Scanner Box */
+.scanner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 170px; /* Adjust size as needed */
+    height: 170px; /* Adjust size as needed */
+    transform: translate(-50%, -50%);
+    border: 3px solid white; /* Scanner border */
+    background: transparent; /* Ensure inside is clear */
+    box-shadow: none; /* Remove any overlay effect */
+    z-index: 10;
+}
+
+/* Remove any semi-transparent overlay */
+.scanner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust overlay transparency */
+    z-index: 5;
+    pointer-events: none;
+}
+/* Add these CSS rules to your styles.css file */
+
+/* Success Checkmark Animation */
+.success-checkmark {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 10px;
+    z-index: 10;
+}
+
+.success-checkmark.animate {
+    animation: scaleIn 0.3s ease-in-out 0.9s forwards;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    background-color: #4CAF50;
+}
+
+.check-icon::before {
+    top: 48px;
+    left: 25px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: longSuccessTick 0.75s ease;
+}
+
+.check-icon::after {
+    top: 39px;
+    left: 17px;
+    width: 15px;
+    transform: rotate(135deg);
+    animation: shortSuccessTick 0.75s ease;
+}
+
+.check-icon::before,
+.check-icon::after {
+    content: '';
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 2px;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes longSuccessTick {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    84% {
+        width: 25px;
+        right: 0px;
+        top: 48px;
+    }
+    100% {
+        width: 25px;
+        right: 0px;
+        top: 48px;
+    }
+}
+
+@keyframes shortSuccessTick {
+    0% {
+        width: 0;
+        left: 17px;
+        top: 39px;
+    }
+    54% {
+        width: 0;
+        left: 17px;
+        top: 39px;
+    }
+    70% {
+        width: 15px;
+        left: 17px;
+        top: 39px;
+    }
+    84% {
+        width: 15px;
+        left: 17px;
+        top: 39px;
+    }
+    100% {
+        width: 15px;
+        left: 17px;
+        top: 39px;
+    }
+}
+
+/* General form styling improvements */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-row > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* User profile section */
+.user-profile {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.profile-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid #fff;
+}
+
+.profile-info h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.profile-info p {
+    margin: 0 0 0.5rem 0;
+    opacity: 0.8;
+}
+
+.dietary-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dietary-tag {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+/* Table actions buttons */
+.action-btn {
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+/* Visual Feedback Animation Styles */
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .feedback-overlay.visible {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .feedback-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .feedback-overlay.visible .feedback-icon {
+    transform: scale(1);
+  }
+  
+  /* Success feedback styles */
+  .feedback-icon.success {
+    background-color: #4CAF50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+  }
+  .feedback-icon.success:after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    border: solid #fff;
+    border-width: 0 0 5px 5px;
+    transform: rotate(-45deg);
+    margin-top: -5px;
+  }
+  
+  /* Error feedback styles */
+  .feedback-icon.error {
+    background-color: #F44336;
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.5);
+  }
+  .feedback-icon.error:before,
+  .feedback-icon.error:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: #fff;
+  }
+  .feedback-icon.error:before {
+    transform: rotate(45deg);
+  }
+  .feedback-icon.error:after {
+    transform: rotate(-45deg);
+  }
+  
+  /* Warning feedback styles */
+  .feedback-icon.warning {
+    background-color: #FFC107;
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+  }
+  .feedback-icon.warning:before {
+    content: "!";
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+  }
+  
+  /* Animation timing */
+  .feedback-overlay.auto-hide {
+    animation: fadeOut 1s ease 2s forwards;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  /* Optional text message styles */
+  .feedback-message {
+    position: absolute;
+    bottom: 30%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.2s;
+  }
+  .feedback-overlay.visible .feedback-message {
+    transform: translateY(0);
+    opacity: 1;
+  }
